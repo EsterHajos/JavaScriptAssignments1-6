@@ -11,5 +11,5 @@ let newPrice = price * 0.10;
 
 
 console.log ("Your original price:$" + input);
-console.log ("Your new  discounted price is:$" + newPrice.toFixed(2));
+console.log ("Your new  discounted price is:$" + newPrice);
 
