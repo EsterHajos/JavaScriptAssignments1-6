@@ -1,4 +1,8 @@
 
+// Assignment lesson JS1:  //
+
+
+
 // exersice 1 //
 console.log ("Hello World");
 
