@@ -1,5 +1,5 @@
 
-// Assignment lesson JS1:  //
+// Assignment Lesson JS01: Intro, Variables, and Operators //
 
 
 
