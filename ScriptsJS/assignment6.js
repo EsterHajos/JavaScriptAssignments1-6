@@ -20,9 +20,10 @@
 
 
 let running = true;
-let library = [];  //behöver jag denna???
+let library = [];  
 
 //funtion add book
+
 function addBook () {
     const title = prompt ("Book title name")
     const author = prompt ("Author name")
@@ -44,6 +45,7 @@ function addBook () {
 
 
 //funtion list book 
+
 function listBooks() {
     if (library.length === 0) {
         console.log("Library is empty");
@@ -59,6 +61,7 @@ function listBooks() {
 
 
 // funtion mark as read 
+
 function markAsRead(title) {
     for (const book of library) {
         if (book.title === title) {
@@ -69,11 +72,6 @@ function markAsRead(title) {
     }
 
 }
-
-//funtions=
-//1. add book 
-//2. list books
-//3. mark as read 
 
 
 while (running) {
