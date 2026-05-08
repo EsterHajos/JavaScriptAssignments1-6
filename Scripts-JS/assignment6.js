@@ -27,10 +27,9 @@ let library = [];
 function addBook () {
     const title = prompt ("Book title name")
     const author = prompt ("Author name")
-    const isRead = prompt (Have you read it? ("yes/no")); //kan man göra true eller false här? 
-
-
-    const isRead = isReadInput.toLowerCase() === "yes";
+    const isReadInput = prompt("Have you read it? (yes/no)");
+    
+    const isRead = isReadInput && isReadInput.toLowerCase() === "yes";
 
     const book = {
         title: title,
@@ -70,8 +69,9 @@ function markAsRead(title) {
             return;
         }
     }
-
+    alert("Book not found.");
 }
+
 
 
 while (running) {
@@ -99,6 +99,6 @@ while (running) {
                 alert ("Goodbye!");
                 break;
             default:
-                altert ("Invalid choice.");
+                alert ("Invalid choice.");
         }
 }
