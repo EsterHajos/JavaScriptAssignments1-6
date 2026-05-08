@@ -8,13 +8,24 @@
 //Provide feedback if the guess is too high or too low.  
 
 
-const guessNumberGame = Math.floor (Math.random() * 10);
+const guessNumberGame = Math.floor (Math.random() * 10) +1;
 let guess = null; 
 
+
 while (guess !== guessNumberGame) {
-    console.log (`guessNumberGame: $(guessNumberGame). Guess: $(guess)`);
+    console.log(`guessNumberGame: ${guessNumberGame}. Guess: ${guess}`);
+
+
     guess=parseFloat (prompt("Guess a number 1-10"));
+
+
+    if (guess < guessNumberGame) {
+        console.log("Guess a higher number!");
+    } else if (guess > guessNumberGame) {
+        console.log("Guess a lower number!");
+    }
+}
 
 }
 
-console.log (`The correct number was $(guessNumberGame). Congrats you guessed the correct number!`);
+console.log (`The correct number was ${guessNumberGame}. You guessed the correct number!`);
