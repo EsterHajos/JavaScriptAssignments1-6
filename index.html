@@ -10,7 +10,33 @@
 
 <h1>Hello</h1>
 <p>Guess the number!</p>
-<p>Guess a number between 1 and 10:</p>
+<p>Guess a number between 1 and 10.</p>
+
+
+
+<script>
+const guessNumberGame = Math.floor (Math.random() * 10) +1;
+let guess = null; 
+
+
+while (guess !== guessNumberGame) {
+    console.log(`guessNumberGame: ${guessNumberGame}. Guess: ${guess}`);
+
+
+    guess=parseFloat (prompt("Guess a number 1-10"));
+
+
+    if (guess < guessNumberGame) {
+        console.log("Guess a higher number!");
+    } else if (guess > guessNumberGame) {
+        console.log("Guess a lower number!");
+    }
+}
+
+}
+
+console.log (`The correct number was ${guessNumberGame}. You guessed the correct number!`);
+</script>
 
 
 
