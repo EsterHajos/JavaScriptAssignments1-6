@@ -26,6 +26,5 @@ while (guess !== guessNumberGame) {
     }
 }
 
-}
 
 console.log (`The correct number was ${guessNumberGame}. You guessed the correct number!`);
