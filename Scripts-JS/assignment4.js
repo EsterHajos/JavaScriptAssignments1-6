@@ -21,10 +21,14 @@ while (guess !== guessNumberGame) {
 
     if (guess < guessNumberGame) {
         console.log("Guess a higher number!");
+        alert("Guess a higher number!");
+
     } else if (guess > guessNumberGame) {
         console.log("Guess a lower number!");
+        alert("Guess a lower number!");
     }
 }
 
 
 console.log (`The correct number was ${guessNumberGame}. You guessed the correct number!`);
+alert (`The correct number was ${guessNumberGame}. You guessed the correct number!`);
