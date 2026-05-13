@@ -15,7 +15,6 @@
 // Bank account information
 const account= {
     accountName: "Ester",
-
     balance: 5000,
 
     getBalance: function balance () {
@@ -27,6 +26,7 @@ const account= {
             this.balance += newBalance;
             return `New Balance after added ${newBalance} sek deposit is: ${this.balance} sek `;
         } 
+        return "Deposit amount must be greater than 0.";
     },
 
     withdrawal: function withdrawal (amount) {
@@ -70,16 +70,24 @@ function runATM() {
     let running = true;
 
     while (running) {
-        let action = prompt(
-            "Pick an option:\n" +
-            "Balance\n" +
-            "Deposit\n" +
-            "Withdrawal\n" +
-            "Name\n" +
-            "Exit"
-        ).toLowerCase();
+        const message = Number (
+            prompt(
+            "Select a choice:\n" +
+            "1. See balance\n" +
+            "2. Deposit\n" +
+            "3. Withdrawal\n" +
+            "4. See account name\n" +
+            "5. Exit"
 
-        if (action === "exit") {
+        )
+        );
+
+
+
+
+
+
+      // då ska all denna kod bort?  if (action === "exit") {
             running = false;
             alert("Thanks for using the ATM!");
             continue;   
