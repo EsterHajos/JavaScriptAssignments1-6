@@ -64,6 +64,52 @@ function atm(action, amount) {
   }
 }
 
+
+// While loop to allow multiple interactions with the ATM
+function runATM() {
+    let running = true;
+
+    while (running) {
+        let action = prompt(
+            "Pick an option:\n" +
+            "Balance\n" +
+            "Deposit\n" +
+            "Withdrawal\n" +
+            "Name\n" +
+            "Exit"
+        );
+
+        if (action === "Exit") {
+            running = false;
+            alert("Thanks for using the ATM!");
+
+        } else if (action === "Deposit" || action === "Withdrawal") {
+            let amount = Number(prompt("Enter amount:"));
+            alert(atm(action, amount));
+        } 
+
+    }
+}
+
+// Start ATM
+
+runATM();
+
+  
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        =
 console.log(atm("name"));
 console.log(atm("balance"));
 console.log(atm("deposit", 500));
