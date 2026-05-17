@@ -40,28 +40,55 @@ const account= {
   
     getAccountName: function accountHolder () {
         return `Account holder name: ${this.accountName}`;
+    },
+
+    getError: function () {
+        return "Error, chose a valid action.";
     }
-}
+};
 
 
 // Atm functions 
-function atm(action, amount) {
-  switch (action) {
-    case "balance":
-      return account.getBalance();
+function atm() {
+    
+    let running = true;
 
-    case "deposit":
-      return account.deposit(amount);
+    while (running) {
 
-    case "withdrawal":
-      return account.withdrawal(amount);
+    const message = parseFloat(
+        prompt(
+            "Select a choice 1.) See Balance 2.) Make a deposit 3.) Make a withdrawal 4.) Get account name 5.) Exit")   
+        );
 
-    case "name":
-      return account.getAccountName();
+        switch (message) {
+            case 1:
+                alert (account.getBalance());
+                break;
 
-    default:
-      return "Invalid action.";
-  }
+            case 2:
+                const depositAmount = parseFloat(prompt("Enter deposit amount:"));
+                alert (account.deposit(depositAmount));
+                break;
+
+            case 3:
+                const withdrawalAmount = parseFloat(prompt("Enter withdrawal amount:"));
+                alert (account.withdrawal(withdrawalAmount));
+                break;
+
+            case 4:
+                alert (account.getAccountName());
+                break;
+
+            case 5:
+                alert ("Thanks for using the ATM!");
+                running = false;
+                break;
+           
+                default:
+                alert (account.getError());
+        }
+
+    }
 }
 
 
@@ -83,47 +110,11 @@ function runATM() {
         );
 
 
-
-
-
-
-      // då ska all denna kod bort?  if (action === "exit") {
-            running = false;
-            alert("Thanks for using the ATM!");
-            continue;   
-
-        } 
-        
-        if (action === "Deposit" || action === "Withdrawal") {
-            let amount = Number(prompt("Enter amount:"));
-            alert(atm(action, amount));
-        } 
-
-        else {
-            alert(atm(action));
-        }
-
-    }
-}
-
 // Start ATM
 
 runATM();
 
   
-        
-
-
-
-
-
-
-
-
-
-
-
-
         
 console.log(atm("name"));
 console.log(atm("balance"));
