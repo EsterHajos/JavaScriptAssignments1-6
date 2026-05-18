@@ -64,12 +64,8 @@ function atm() {
         "3. Withdrawal\n" +
         "4. Get account name\n" +
         "5. Exit"
-    );
-)   
-
-
-
-
+    )
+);
 
 
         switch (message) {
