@@ -77,7 +77,7 @@ function markAsRead(title) {
     }
 
 
-
+// fucntion Menu
 
 while (running) {
     const choice = prompt (`
@@ -92,17 +92,25 @@ while (running) {
             case "1":
                 addBook ();
                 break;
+
+
             case "2":
                 listBooks ();
+                alert ("Check the console to see book list")
                 break;
+
+
             case "3":
                 const title = prompt ("Enter the title of the book to mark as read:");
                 markAsRead(title);
                 break;
+
+
             case "4":
                 running = false;
                 alert ("Goodbye!");
                 break;
+
             default:
                 alert ("Invalid choice.");
         }
