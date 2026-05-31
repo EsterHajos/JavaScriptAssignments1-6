@@ -46,7 +46,7 @@ function addBook () {
 }
 
 
-//funtion list book 
+//funtion list books
 
 function listBooks() {
     if (library.length === 0) {
@@ -54,26 +54,28 @@ function listBooks() {
         return;
     }
 
-    let i = 1;
-    for (const book of library) {
-        console.log(`${i}. ${book.title} by ${book.author} - ${book.isRead ? "Read" : "Not Read"}`);
-        i++;
-    }  //kan jag göra denna enklare?
+    library.forEach((book, index) => {
+        console.log(
+        `${i}. ${book.title} by ${book.author} - ${book.isRead ? "Read" : "Not Read"}`
+    );
+});
 }
-
+       
 
 // funtion mark as read 
 
 function markAsRead(title) {
-    for (const book of library) {
-        if (book.title === title) {
+    const book = library.find(book => book.title === title);
+        if (book) {
             book.isRead = true; 
             alert ("Book is read!");
+        } else {
+            alert("Book not found.");
             return;
         }
+
     }
-    alert("Book not found.");
-}
+
 
 
 
