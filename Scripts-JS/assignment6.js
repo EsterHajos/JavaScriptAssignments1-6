@@ -22,11 +22,14 @@
 let running = true;
 let library = [];  
 
+
+
+
 //funtion add book
 
 function addBook () {
-    const title = prompt ("Book title name")
-    const author = prompt ("Author name")
+    const title = prompt("Book title name");
+    const author = prompt("Author name");
     const isReadInput = prompt("Have you read it? (yes/no)");
     
     const isRead = isReadInput && isReadInput.toLowerCase() === "yes";
@@ -34,7 +37,7 @@ function addBook () {
     const book = {
         title: title,
         author: author,
-        isRead: isRead
+        isRead: isRead,
     };
 
     library.push(book);
