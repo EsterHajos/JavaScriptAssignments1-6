@@ -42,6 +42,8 @@ function addBook () {
 
     library.push(book);
 
+    console.log(library);
+
     alert("Book added!");
 }
 
@@ -50,15 +52,17 @@ function addBook () {
 
 function listBooks() {
     if (library.length === 0) {
-        console.log("Library is empty");
+        alert("Library is empty");
         return;
     }
 
+    let output ="";
+
     library.forEach((book, index) => {
-        console.log(
-        `${i}. ${book.title} by ${book.author} - ${book.isRead ? "Read" : "Not Read"}`
-    );
-});
+        output += `${index +1}. ${book.title} by ${book.author} - ${book.isRead ? "Read" : "Not Read"}\n`;
+    });
+
+    alert(output);
 }
        
 
